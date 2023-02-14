@@ -90,7 +90,7 @@
   </div>
 </nav>
 
-<section class="home_banner">
+<section class="home_banner" style="background: url(../img/banner1.jpg) no-repeat center center / cover;">
   <div class="container">
     <div class="row">
       <div class="banner-caption">
@@ -332,10 +332,66 @@
   </div>
 </footer>
 
+
+<!-- Modal -->
+<div class="modal fade dematmodal" id="dematModal" tabindex="-1" aria-labelledby="dematModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <!-- <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body p-0">
+          <div class="row g-0">
+            <div class="col-12 col-lg-5 order-1 order-lg-0">
+              <div class="demat-items">
+                <div class="demat-item">
+                  <h6 class="demat-item-textlarge fs-3">Zero Cost</h6>
+                  <p class="demat-item-textsmall">In Mutul Funds and IPO’s</p>
+                </div>
+                <div class="demat-item">
+                  <h6 class="demat-item-textlarge fs-3">Brok @ <span class="text-decoration-line-through fw-normal fs-5">0.50%</span> 0.30% </h6>
+                  <p class="demat-item-textsmall">valid till 31st March 2023</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7 order-0 order-lg-1">
+              <div class="demat-head">
+                <div class="demat-title">Are you still missing reaching your financial goals Join Gretex Participate in Equity</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="demat-body">
+                <form action="">
+                <div class="demat-form-group mb-3">
+                  <label class="form-label">Enter your mobile number to continue</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="text" class="form-control" id="" placeholder="Enter your mobile number">
+                  </div>
+                </div>
+                <button class="btn btn-primary my-4">Open Demat Account Free</button>
+                </form>
+                <p class="demat-terms">By signing up you agree to receive transaction updated You may receive calls from our team setup your trading and demat accounts <a href="#">Terms and Conditions apply</a></p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
 <!-- SCRIPT -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-
-
+<script type="text/javascript">
+    window.onload = () => {
+        $('#dematModal').modal('show');
+    }
+</script>
 </body>
 </html>
