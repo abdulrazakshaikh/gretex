@@ -30,6 +30,7 @@
 	--letterspacing-medium : 0.10rem;
 
 	--navbar-height : 100px;
+  --innerbanner-height : 20vh;
 }
 /*================================ VARIABLES ================================*/
 /*============================= SCROLLBAR START =============================*/
@@ -84,6 +85,13 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     --bs-text-opacity: 1;
     color: rgba(var(--primaryrgb-color),var(--bs-text-opacity))!important;
 }
+
+.form-control::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.5); font-weight: 400;}
+.form-control::-moz-placeholder {color: rgba(0, 0, 0, 0.5); font-weight: 400;}
+.form-control:-ms-input-placeholder {color: rgba(0, 0, 0, 0.5); font-weight: 400;}
+.form-control::-ms-input-placeholder {color: rgba(0, 0, 0, 0.5); font-weight: 400;}
+.form-control::placeholder {color: rgba(0, 0, 0, 0.5); font-weight: 400;}
+
 /*============================== NAVBAR START ===============================*/
 
 .navbar-header{
@@ -219,6 +227,10 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 .navbar-header .navbar-nav .nav-item .nav-link:hover{
   color: var(--primary-color);
 }
+.navbar-header .navbar-nav .nav-item .nav-link.active{
+  color: var(--primary-color);
+  font-weight: bold;
+}
 
 @media screen and (min-width: 768px){
   .navbar-header .offcanvas{
@@ -291,6 +303,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   }
   .navbar-header .topbar .topbar-nav .nav-item .nav-item-label{
     flex: 1;
+    white-space: nowrap;
   }
   .navbar-header .topbar .topbar-nav .nav-item .nav-item-data{
   }
@@ -410,9 +423,9 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 
 /*============================= HOMEPAGE START ==============================*/
 .home_banner {
-    background: url(../img/banner1.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    /*background: url(../img/banner1.jpg) no-repeat;*/
+    /*background-size: cover;
+    background-position: center;*/
     height: 80vh;
     width: 100%;
     display: flex;
@@ -490,3 +503,113 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   object-fit: contain;
 }
 /*============================== HOMEPAGE END ===============================*/
+
+/*============================ DEMAT MODAL START ============================*/
+.demat-items{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    height: 100%;
+}
+.demat-items .demat-item{
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: rgba(var(--primaryrgb-color), 0.85);
+}
+.demat-items .demat-item + .demat-item{
+  background-color: rgba(var(--primaryrgb-color), 1.0);
+}
+.demat-items .demat-item .demat-item-textlarge{
+  font-weight: bold;
+  font-family: var(--secondaryfont);
+  letter-spacing: var(--letterspacing-medium);
+}
+.demat-items .demat-item .demat-item-textsmall{
+  font-family: var(--secondaryfont);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: var(--letterspacing-medium);
+}
+.demat-head{
+  padding: 1rem 2rem 1rem 1rem;
+  display: flex;
+}
+.demat-head .btn-close:focus{
+  box-shadow: none;
+}
+.demat-head .demat-title{
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: var(--secondaryfont);
+  line-height: normal;
+}
+.demat-body{
+  padding: 1rem;
+}
+.demat-form-group{}
+.demat-form-group .form-label{
+  color: rgba(var(--text-dark-rgb), 0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.demat-form-group .input-group{
+  border-bottom: 2px solid var(--bs-border-color);
+}
+.demat-form-group .input-group:focus-within{
+  border-color: var(--primary-color);
+}
+.demat-form-group .input-group .input-group-text{
+  border: 0px;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-right: 0;
+}
+.demat-form-group .input-group .form-control{
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: none;
+  height: 44px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: var(--letterspacing-small);
+}
+.demat-form-group .input-group .form-control:focus{
+  box-shadow: none;
+}
+.demat-body .btn-primary{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: var(--letterspacing-small);
+}
+.demat-terms{
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+.demat-terms a{
+  font-weight: 600;
+}
+.demat-terms a:hover{
+  text-decoration: underline;
+}
+/*============================= DEMAT MODAL END =============================*/
+
+/*=============================== ABOUT START ===============================*/
+.inner_banner{
+  height: var(--innerbanner-height);
+  background-color: #8c8c8c;
+  overflow: hidden;
+}
+.inner_banner .banner-caption{
+  height: var(--innerbanner-height);
+}
+.inner_banner .banner-caption .banner-title{}
+/*================================ ABOUT END ================================*/
