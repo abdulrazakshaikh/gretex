@@ -614,3 +614,66 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 }
 .inner_banner .banner-caption .banner-title{}
 /*================================ ABOUT END ================================*/
+
+/*============================== CONTACT START ==============================*/
+.form-group{
+  margin-bottom: 1.5rem;
+}
+.form-group .form-label{
+    color: rgba(var(--text-dark-rgb), 0.8);
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0 .75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing-medium);
+}
+.form-group .form-control{
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    letter-spacing: var(--letterspacing-medium);
+    font-weight: 600;
+    color: var(--text-dark); 
+
+}
+.form-group .form-control:focus {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: none;
+}
+.list-group-contact{}
+.list-group-contact .list-group-item{
+  border: 0;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.list-group-contact .list-group-item .list-group-item-icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: rgba(var(--secondaryrgb-color), 1.0);
+  /*  color: rgba(var(--secondaryrgb-color), 1.0);*/
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-group-contact .list-group-item .list-group-item-icon .icon{}
+.list-group-contact .list-group-item .list-group-item-text{
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark); 
+    line-height: normal;
+    letter-spacing: var(--letterspacing-small);
+}
+.list-group-contact .list-group-item .list-group-item-text a:hover{
+  text-decoration: underline;
+}
+/*=============================== CONTACT END ===============================*/
