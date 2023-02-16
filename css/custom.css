@@ -2,6 +2,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /*================================== FONTS ==================================*/
 
@@ -9,7 +11,7 @@
 :root{
 
 	--primary-color : #104B88;
-	--primaryrgb-color : 16, 75, 136;
+  --primaryrgb-color : 16, 75, 136;
 
   --secondary-color : #60913F;
   --secondaryrgb-color : 96, 145, 63;
@@ -22,12 +24,12 @@
 	--bglight-color : #F5F5F7;
   --bgprimarylight-color : #DDEEFF;
 
-	--primaryfont : 'Roboto', sans-serif;
+	--primaryfont : 'Montserrat', sans-serif;
   --secondaryfont : 'Roboto Condensed', sans-serif;
 	--primaryiconfont : 'bootstrap-icons';
 
-	--letterspacing-small : 0.05rem;
-	--letterspacing-medium : 0.10rem;
+	--letterspacing-small : 0.02rem;
+	--letterspacing-medium : 0.05rem;
 
 	--navbar-height : 100px;
   --innerbanner-height : 20vh;
@@ -117,7 +119,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 }
 .navbar-header .topbar{
   background: var(--primary-color);
-  min-height: 35px;
+  min-height: 40px;
   display: flex;
   align-items: center;
 }
@@ -129,7 +131,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 
 .navbar-header .topbar .topbar-support .topbar-link{
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
 }
 .navbar-header .topbar .topbar-support .topbar-link:hover{
@@ -160,14 +162,14 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   color: #ffffff;
   font-weight: 400;
   padding-right: 0.35rem;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: var(--letterspacing-medium);
 }
 .navbar-header .topbar .topbar-nav .nav-item .nav-item-data{
   display: flex;
   align-items: center; 
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: var(--letterspacing-small);
 }
 .navbar-header .topbar .topbar-nav .nav-item .nav-item-data .nav-item-value{
@@ -219,7 +221,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   display: flex;
   align-items: center;
   padding: 6px 18px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.95rem;
   color: var(--text-dark);
   letter-spacing: var(--letterspacing-small);
@@ -348,7 +350,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 .footer .company-information .foot-contacts .footcontact-item .footcontact-label{
   color: #ffffff;
   font-weight: 400;
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: var(--letterspacing-medium);
@@ -371,7 +373,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   font-weight: 600;
   color: #ffffff;
   font-size: 1rem;
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   letter-spacing: var(--letterspacing-medium);
   margin-bottom: 1.25rem;
 }
@@ -382,7 +384,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 .footer .footer-link li a{
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   font-size: 0.95rem;
   letter-spacing: var(--letterspacing-medium);
 }
@@ -409,10 +411,11 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   margin-bottom: 2rem;
 }
 .section-title{
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   font-weight:  500;
   font-size: 2rem;
   line-height: 1.2;
+  text-align: center;
   color: var(--text-dark);
 }
 .section-title .text-primary{
@@ -426,13 +429,14 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     /*background: url(../img/banner1.jpg) no-repeat;*/
     /*background-size: cover;
     background-position: center;*/
-    height: 80vh;
+    max-height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
     vertical-align: middle;
     overflow: hidden;
 }
+.home_banner {}
 .banner-caption{
     display: flex;
     flex-direction: column;
@@ -440,14 +444,19 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     justify-content: center;
     text-align: center;
     color: #ffffff;
+    top: 0px;
+    bottom: 0px;
 }
 .banner-caption .banner-title{
-    font-family: var(--secondaryfont);
+    font-family: var(--primaryfont);
     font-weight: 900;
+    font-size: calc(1.325rem + 1.25vw);
+/*    font-size: 2.85rem;*/
 }
 .banner-caption .banner-desc{
-    font-family: var(--secondaryfont);
+    font-family: var(--primaryfont);
     font-weight: 500;
+    font-size: calc(1.2rem + .4vw);
 }
 .banner-caption .banner-action{
   padding: 0.75rem 1rem;
@@ -457,9 +466,19 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   text-transform: uppercase;
 }
 .card{}
+.card .img-associate{
+    height: 104px;
+    padding: 1rem;
+}
+.card .img-associate img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .card .card-body{}
 .card .card-body .card-title{
     font-size: 1.35rem;
+    text-align: center;
     color: var(--text-dark);
     font-weight: bold;
 }
@@ -502,6 +521,17 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   height: 100%;
   object-fit: contain;
 }
+
+@media screen and (max-width: 576.98px){
+  .banner-caption .banner-title{
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  .banner-caption .banner-desc{
+    font-size: 1rem;
+    line-height: normal;
+  }
+}
 /*============================== HOMEPAGE END ===============================*/
 
 /*============================ DEMAT MODAL START ============================*/
@@ -526,11 +556,11 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 }
 .demat-items .demat-item .demat-item-textlarge{
   font-weight: bold;
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   letter-spacing: var(--letterspacing-medium);
 }
 .demat-items .demat-item .demat-item-textsmall{
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   font-weight: 400;
   font-size: 0.85rem;
   letter-spacing: var(--letterspacing-medium);
@@ -545,7 +575,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 .demat-head .demat-title{
   font-size: 1.75rem;
   font-weight: bold;
-  font-family: var(--secondaryfont);
+  font-family: var(--primaryfont);
   line-height: normal;
 }
 .demat-body{
@@ -635,10 +665,9 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     border-bottom: 1px solid #e5e5e5;
     letter-spacing: var(--letterspacing-medium);
     font-weight: 600;
-    color: var(--text-dark); 
-
+    color: var(--text-dark);
 }
-.form-group .form-control:focus {
+.form-group .form-control:focus{
   background-color: transparent;
   border-color: var(--primary-color);
   outline: 0;
