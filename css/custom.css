@@ -36,7 +36,7 @@
 }
 /*================================ VARIABLES ================================*/
 /*============================= SCROLLBAR START =============================*/
-body{
+body, .scrolllist{
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -45,6 +45,13 @@ body::-webkit-scrollbar{
     width: 5px;   
 }
 body::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.scrolllist::-webkit-scrollbar{
+    height: 2px;   
+}
+.scrolllist::-webkit-scrollbar-thumb{
   border-radius: 10px;
   background-color: var(--primary-color);
 }
@@ -78,6 +85,7 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     --bs-btn-color: #fff;
     --bs-btn-bg: var(--secondary-color);
     --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-border-color: var(--secondary-color);
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: rgba(var(--secondaryrgb-color), 0.8);
     --bs-btn-disabled-bg: var(--secondary-color);
@@ -636,8 +644,17 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 /*=============================== ABOUT START ===============================*/
 .inner_banner{
   height: var(--innerbanner-height);
-  background-color: #8c8c8c;
+/*  background-color: #8c8c8c;*/
   overflow: hidden;
+  position: relative;
+}
+.inner_banner:before{
+  content: '';
+    background: url(../img/banner_image.png) no-repeat center center / cover;
+/*    filter: blur(10px);*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 .inner_banner .banner-caption{
   height: var(--innerbanner-height);
@@ -706,3 +723,152 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   text-decoration: underline;
 }
 /*=============================== CONTACT END ===============================*/
+/*============================= DOWNLOADS START =============================*/
+.tabs-wrap{
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+.tabs-wrap .nav-tabs{
+  width: 200px;
+  border: 0px;
+  background-color: var(--bs-gray-200);
+  padding: 0.35rem;
+  border-radius: 4px;
+  flex-direction: column;
+}
+.tabs-wrap .nav-tabs .nav-link{
+  margin-bottom: 0.5rem;
+  display: flex;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  padding: 0.5rem 0.5rem 0.5rem 0.85rem;
+  letter-spacing: var(--letterspacing-medium);
+}
+.tabs-wrap .nav-tabs .nav-link.active{
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+.tabs-wrap .nav-tabs .nav-link .nav-link-text{
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+.tabs-wrap .nav-tabs .nav-link .badge{
+  background-color: var(--bs-secondary);
+  width: 36px;
+  font-weight: 400;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.tabs-wrap .nav-tabs .nav-link.active .badge{
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-weight: 600;
+
+}
+.tabs-wrap .tab-content{
+  flex: 1;
+}
+.tabs-wrap .tab-content .tab-pane{}
+
+.list-group.list-group-file{}
+.list-group-file .list-group-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-width: 1px;
+  border-radius: 4px;
+}
+.list-group-file .list-group-item .list-group-icon{
+  width: 48px;
+  height: 48px;
+}
+.list-group-file .list-group-item .list-group-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.list-group-file .list-group-item .list-group-content{
+    flex: 1;
+    gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.list-group-file .list-group-item .list-group-content .list-group-title{
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    letter-spacing: var(--letterspacing-small);
+    margin: 0;
+}
+.list-group-file .list-group-item .list-group-content .list-group-date{
+  font-weight: 500;
+    font-size: 0.8rem;
+    color: rgba(var(--text-dark-rgb), 0.65);
+    letter-spacing: var(--letterspacing-medium);
+    margin: 0;
+}
+.list-group-file .list-group-item .list-group-action{}
+.list-group-file .list-group-item .list-group-action .btn{
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 991.98px){
+  .tabs-wrap{
+    flex-direction: column;
+  }
+  .tabs-wrap .nav-tabs{
+    padding: 0;
+    width: auto;
+    overflow: auto;
+
+    /*
+    border: 0px;
+    background-color: var(--bs-gray-200);
+    padding: 0.35rem;*/
+    border-radius: 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .tabs-wrap .nav-tabs .nav-link{
+    margin: 0;
+    padding: .75rem 1rem;
+    gap: 0.5rem;
+    font-weight: 600;
+    border-radius: 0;
+    border: 0;
+  }
+  .tabs-wrap .nav-tabs .nav-link:not(:last-child){
+    margin-right: 1rem;
+  }
+  .tabs-wrap .nav-tabs .nav-link .badge{
+    width: auto;
+    font-weight: 400;
+    padding: 0.25rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+  .tabs-wrap .nav-tabs .nav-link.active{
+    background-color: transparent;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+  .tabs-wrap .nav-tabs .nav-link.active .badge{
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }
+}
+/*============================== DOWNLOADS END ==============================*/
