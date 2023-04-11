@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
 /*================================== FONTS ==================================*/
 
 /*================================ VARIABLES ================================*/
@@ -24,7 +25,8 @@
 	--bglight-color : #F5F5F7;
   --bgprimarylight-color : #DDEEFF;
 
-	--primaryfont : 'Montserrat', sans-serif;
+	--primaryfont : 'Calibri', sans-serif;
+/*  --primaryfont : 'Montserrat', sans-serif;*/
   --secondaryfont : 'Roboto Condensed', sans-serif;
 	--primaryiconfont : 'bootstrap-icons';
 
@@ -398,6 +400,16 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
 }
 .footer .footer-link li a:hover{
   text-decoration: underline;
+}
+
+.disclaimer-label{
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+
+}
+.disclaimer-text{
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (max-width:  768px){
