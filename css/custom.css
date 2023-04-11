@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic');
+@import url('https://fonts.cdnfonts.com/css/book-antiqua');
 /*================================== FONTS ==================================*/
 
 /*================================ VARIABLES ================================*/
@@ -25,7 +26,7 @@
 	--bglight-color : #F5F5F7;
   --bgprimarylight-color : #DDEEFF;
 
-	--primaryfont : 'Calibri', sans-serif;
+	--primaryfont : 'Book Antiqua', sans-serif;
 /*  --primaryfont : 'Montserrat', sans-serif;*/
   --secondaryfont : 'Roboto Condensed', sans-serif;
 	--primaryiconfont : 'bootstrap-icons';
