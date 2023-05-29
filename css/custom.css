@@ -520,7 +520,9 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
     font-weight: 500;
     margin-bottom: 0;
 }
-.services-card{}
+.services-card{
+
+}
 .services-card .card-body{
     display: flex;
     align-items: center;
@@ -895,3 +897,86 @@ a:hover, a:focus, .btn:hover, .btn:focus{ box-shadow: none; text-decoration: non
   }
 }
 /*============================== DOWNLOADS END ==============================*/
+/*------------------------------- TABLE STAR --------------------------------*/
+
+.table-bordered thead th, .table-bordered thead td,
+.table-bordered tbody th, .table-bordered tbody td{
+    border-width: 1px;
+    border-color:  #d2d2d2;
+}
+.table.table-bordered>:not(:first-child){
+  border-top: 0px;
+}
+.table.table-sm thead th{
+  padding: .25rem;
+  font-size: 0.75rem;
+}
+.table.table-sm tbody td{
+  padding: .25rem;
+  font-size: 0.75rem;
+    font-weight: 400;
+}
+.table.table-sm tbody td.td-red{
+  background-color: rgba(var(--bs-danger-rgb), 0.65);
+}
+.table.table-sm thead th:first-child, 
+.table.table-sm tbody td:first-child{
+    position:sticky;
+    left: -1rem;
+    background-color: #E2E8F0;
+    z-index: 99;
+    border-left: 0;
+    border-right: 1px solid #d2d2d2;
+}
+.table-bordered thead th{
+    color: var(--ezr-text-color);
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.10rem;
+    position: relative;
+    padding: .75rem .5rem;
+    vertical-align: middle;
+    background-color: #E2E8F0;
+}
+.table-bordered tbody td{
+    color: #000;
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.10rem;
+    position: relative;
+    vertical-align: middle;
+}
+
+/*-------------------------------- TABLE END --------------------------------*/
+.ribbon {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 7px 0;
+  background-color: #dc3545;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font-family: var(--primaryfont);
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+.ribbon-top-right {
+  top: 0px;
+  right: 0px;
+}
+.ribbon-top-right span {
+  top: 23px;
+  right: -75px;
+  transform: rotate(45deg);
+}

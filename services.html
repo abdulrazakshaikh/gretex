@@ -158,6 +158,7 @@
       </div>  
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="services-card card h-100 rounded-4 border-0 shadow wow fadeIn" data-wow-delay="0.4s">
+          <div class="ribbon ribbon-top-right"><span>Coming Soon</span></div>
           <div class="card-body">
             <div class="icon">
               <img src="img/commodities.png" class="img-fluid" alt="">
@@ -170,6 +171,7 @@
       
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="services-card card h-100 rounded-4 border-0 shadow wow fadeIn" data-wow-delay="0.6s">
+          <div class="ribbon ribbon-top-right"><span>Coming Soon</span></div>
           <div class="card-body">
             <div class="icon">
               <img src="img/mutualfundtrading.png" class="img-fluid" alt="">
@@ -328,10 +330,10 @@
               <li><a href="img/Annexure_A_investor_charter_fo_stock_broker-1.pdf" target="_blank">Investor Charter</a></li>  
               <!-- <li><a href="img/Annexure_A_investor_charter_fo_stock_broker-1.pdf" target="_blank">Gretex share broking</a></li>   -->
               <!-- <li><a href="img/Tickerforinvestors.pdf" target="_blank">Ticker for investors</a></li>   -->
-              <li><a href="underconstruction.html" target="_blank">Details of Bank</a></li>  
+              <li><a href="#bankDetailsModal" data-bs-toggle="modal">Details of Bank</a></li>  
               <li><a href="img/Escalation_Matrix.pdf" target="_blank">Escalation Matrix</a></li>  
               <!-- <li><a href="img/Escalation_Matrix.pdf" target="_blank">Compliance officer</a></li>   -->
-              <li><a href="" target="_blank">Regulatory corner</a></li> 
+              <li><a href="javascript:void(0)" target="_blank">Regulatory corner</a></li> 
               <li><a href="img/Dos-Donts.pdf" target="_blank">Do's and Don'ts to Safe Investing</a></li> 
             </ul>
           </div>
@@ -352,6 +354,52 @@ Compliance officer: Mrs.Meenu Walia, Tel: (022) 62390754 Email: compliance@grete
   </div>
 </footer>
 
+<!-- Bank Details Modal -->
+<div class="modal fade" id="bankDetailsModal" tabindex="-1" aria-labelledby="bankDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="bankDetailsModalLabel">Details of Bank</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name Of Bank</th>
+              <th>Address Of Bank</th>
+              <th>Branch Name</th>
+              <th>Account Number</th>
+              <th>PAN</th>
+              <th>IFSC Code</th>
+              <th>Account Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hdfc Bank</td>
+              <td>Jehangir Building, M.g Road,</td>
+              <td>Fort, Mumbai</td>
+              <td>57500001120244</td>
+              <td>AAOCS1879E</td>
+              <td>HDFC0000060</td>
+              <td>Gretex Share Broking Private Limited Client A/C</td>
+            </tr>
+            <tr>
+              <td>Hdfc Bank</td>
+              <td>B.B.D Bag, East,Kolkata</td>
+              <td>Stephen House</td>
+              <td>00080340040502</td>
+              <td>AAOCS1879E</td>
+              <td>HDFC0000008</td>
+              <td>Gretex Share Broking Private Limited</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- SCRIPT -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
